@@ -12,6 +12,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="logo.jpg" sizes="196x196" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -75,9 +76,7 @@
         if(index < paths.size())
         {
     %>
-        <div class="col-md-4">
-            <img class="img-responsive center-block" src= "<%= paths.get(index)%>"/> 
-        </div>
+        <img class="img-responsive center-block" src= "<%= paths.get(index)%>"/>
     <%
         index++;
         }

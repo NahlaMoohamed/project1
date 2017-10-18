@@ -53,6 +53,7 @@ public final class cards_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<head>\n");
       out.write("    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n");
+      out.write("    <link rel=\"icon\" type=\"image/png\" href=\"logo.jpg\" sizes=\"196x196\" />\n");
       out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"http://fonts.googleapis.com/css?family=Tangerine\">\n");
       out.write("    <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css\" rel=\"stylesheet\"/>\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n");
@@ -121,9 +122,33 @@ public final class cards_jsp extends org.apache.jasper.runtime.HttpJspBase
     
       out.write("\n");
       out.write("        <div class=\"col-md-4\">\n");
-      out.write("            <img class=\"img-responsive center-block\" src= \"");
+      out.write("            <a data-toggle = \"myModal");
+      out.print(index);
+      out.write("\" class=\"btn btn-lg btn-default\" data-target=\"#myModal");
+      out.print(index);
+      out.write("\"><img class=\"img-responsive center-block\" src= \"");
       out.print( paths.get(index));
-      out.write("\"/> \n");
+      out.write("\"/></a>\n");
+      out.write("            <div id=\"myModal");
+      out.print(index);
+      out.write("\" class=\"modal fade\" role=\"dialog\">\n");
+      out.write("                <div class=\"modal-dialog\">\n");
+      out.write("                  <div class=\"modal-content\">\n");
+      out.write("                    <div class=\"modal-header\">\n");
+      out.write("                      <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n");
+      out.write("                      <h4 class=\"modal-title\">Card</h4>\n");
+      out.write("                    </div>\n");
+      out.write("                    <div class=\"modal-body\">\n");
+      out.write("                      <img class=\"img-responsive center-block\" src= \"");
+      out.print( paths.get(index));
+      out.write("\"/>\n");
+      out.write("                    </div>\n");
+      out.write("                    <div class=\"modal-footer\">\n");
+      out.write("                      <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n");
+      out.write("                    </div>\n");
+      out.write("                  </div>\n");
+      out.write("                </div>\n");
+      out.write("          </div>\n");
       out.write("        </div>\n");
       out.write("    ");
 
